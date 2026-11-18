@@ -1,0 +1,19 @@
+[
+  {
+    "key": "w1",
+    "value": {
+      "type": "Window",
+      "id": "w1",
+      "hall": "east"
+    }
+  },
+  {
+    "key": "c1",
+    "value": {
+      "type": "Capability",
+      "id": "c1",
+      "window": "w1",
+      "service": "company-change"
+    }
+  }
+]

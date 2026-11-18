@@ -1,0 +1,24 @@
+{
+  "entry_path": "/enumeration",
+  "media": "application/soap+xml",
+  "routes": [
+    {
+      "path": "/enumeration",
+      "method": "GET",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/soap+xml"
+      },
+      "body": "<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:e=\"urn:hall:enumeration\"><s:Body><e:PullResponse generation=\"g1\"><e:Items><e:Window id=\"w1\" hall=\"east\"/><e:Capability id=\"c1\" window=\"w1\" service=\"company-change\"/></e:Items><e:EnumerationContext>ctx-2</e:EnumerationContext></e:PullResponse></s:Body></s:Envelope>"
+    },
+    {
+      "path": "/enumeration",
+      "method": "POST",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/soap+xml"
+      },
+      "body": "<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:e=\"urn:hall:enumeration\"><s:Body><e:PullResponse generation=\"g1\"><e:Items><e:Window id=\"w1\" hall=\"east\"/><e:Capability id=\"c1\" window=\"w1\" service=\"company-change\"/></e:Items><e:EnumerationContext>ctx-2</e:EnumerationContext></e:PullResponse></s:Body></s:Envelope>"
+    }
+  ]
+}
