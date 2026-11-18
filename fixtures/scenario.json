@@ -14,11 +14,42 @@
     {
       "path": "/enumeration",
       "method": "POST",
+      "body_contains": "<e:Enumerate>",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/soap+xml"
+      },
+      "body": "<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:e=\"urn:hall:enumeration\"><s:Body><e:EnumerateResponse><e:EnumerationContext>ctx-1</e:EnumerationContext></e:EnumerateResponse></s:Body></s:Envelope>"
+    },
+    {
+      "path": "/enumeration",
+      "method": "POST",
+      "body_contains": "<e:EnumerationContext>ctx-1</e:EnumerationContext><e:MaxElements>",
       "status": 200,
       "headers": {
         "Content-Type": "application/soap+xml"
       },
       "body": "<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:e=\"urn:hall:enumeration\"><s:Body><e:PullResponse generation=\"g1\"><e:Items><e:Window id=\"w1\" hall=\"east\"/><e:Capability id=\"c1\" window=\"w1\" service=\"company-change\"/></e:Items><e:EnumerationContext>ctx-2</e:EnumerationContext></e:PullResponse></s:Body></s:Envelope>"
+    },
+    {
+      "path": "/enumeration",
+      "method": "POST",
+      "body_contains": "<e:EnumerationContext>ctx-2</e:EnumerationContext><e:MaxElements>",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/soap+xml"
+      },
+      "body": "<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:e=\"urn:hall:enumeration\"><s:Body><e:PullResponse generation=\"g1\"><e:Items><e:Window id=\"w2\" hall=\"west\"/><e:Capability id=\"c2\" window=\"w2\" service=\"permit-renewal\"/></e:Items><e:EndOfSequence/></e:PullResponse></s:Body></s:Envelope>"
+    },
+    {
+      "path": "/enumeration",
+      "method": "POST",
+      "body_contains": "<e:Release>",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/soap+xml"
+      },
+      "body": "<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:e=\"urn:hall:enumeration\"><s:Body><e:ReleaseResponse/></s:Body></s:Envelope>"
     }
   ]
 }
